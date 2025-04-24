@@ -1,9 +1,11 @@
 p {
-	color: navy;
+	color: #ffffff;
+	text-shadow: navy;
 }
 
 p.info {
-	font-size: 10pt;
+	font-size: small;
+	background-color: #dfdfdf;
 }
 
 h1 {
@@ -16,12 +18,20 @@ h2 {
 }
 
 div#zentai {
-	display: flex;
-	flex-direction: row;
-	width: 1024px;
+	font-family: cursive;
+	color: #3f3faf;
+	background: linear-gradient(#ffffff,#ffefaf);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 200px;
+	width: 10px;
 }
 
 div#zentai > div {
-	margin-left: 5px;
+	padding: 5px;
 	background-color: #ffefaf;
+}
+
+img.sign {
+	float: right;
 }

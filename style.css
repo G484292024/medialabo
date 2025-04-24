@@ -1,0 +1,19 @@
+p {/*　本文　*/
+    color: #734e30;
+}
+
+h1,h2,h3 {/*　見出し、小見出し　*/
+    color: #594639;
+}
+
+li {
+    list-style: none;
+}
+
+a:link {/*　URL　*/
+    color: blue;
+}
+
+a:visited {/*　入った後のURL　*/
+    color: purple;
+}

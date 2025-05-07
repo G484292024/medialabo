@@ -6,6 +6,86 @@ h1,h2,h3 {/*　見出し、小見出し　*/
     color: #594639;
 }
 
+h1 {/* 見出し */
+    position: relative;
+  }
+  
+  h1:after {/* 見出しのアンダーライン */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 38.6%;
+    height: 7px;
+    background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+    background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+  }
+
+  h2 {/* 小見出し */
+    position: relative;
+    line-height: 1;
+    padding:0.25em 1em;
+    display: inline-block;
+    top:0;
+  }
+  
+  h2:before, h2:after { /* 小見出しの[] */
+    position: absolute;
+    top: 0;
+    content:'';
+    width: 8px;
+    height: 100%;
+    display: inline-block;
+  }
+  
+  h2:before {/* 小見出しの[]のデザイン */
+    border-top: dotted 1px #535aaa;
+    border-left: dotted 1px #535aaa;
+    border-bottom: dotted 1px #535aaa;
+    left: 0;
+  }
+  
+  h2:after {/* 小見出しの[]のデザイン */
+    content: '';
+    border-top: dotted 1px #535aaa;
+    border-right: dotted 1px #535aaa;
+    border-bottom: dotted 1px #535aaa;
+    right: 0;
+  }
+
+  h3 {
+    position: relative;
+    color: white;
+    background: #81d0cb;
+    padding: 8px 15px;
+    margin-left: 45px;
+    border-radius: 20px;
+    line-height: 1.4;
+    width: 25%;
+  }
+
+  h3::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\025cf";
+    font-weight: 900;
+    position: absolute;
+    font-size: 15px;
+    left: -40px;
+    bottom: 0;
+    color: #81d0cb;
+  }
+  
+  h3::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\025cf";
+    font-weight: 900;
+    position: absolute;
+    font-size: 23px;
+    left: -25px;
+    bottom: 0;
+    color: #81d0cb;
+  }
+
 li {
     list-style: none;
 }

@@ -10,7 +10,7 @@ h1 {/* 見出し */
     position: relative;
   }
   
-  h1:after {/* 見出しのアンダーライン */
+  h1::after {/* 見出しのアンダーライン */
     content: "";
     position: absolute;
     left: 0;
@@ -19,9 +19,9 @@ h1 {/* 見出し */
     height: 7px;
     background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
     background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
-  }
+}
 
-  h2 {/* 小見出し */
+h2 {/* 小見出し */
     position: relative;
     line-height: 1;
     padding:0.25em 1em;
@@ -38,22 +38,22 @@ h1 {/* 見出し */
     display: inline-block;
   }
   
-  h2:before {/* 小見出しの[]のデザイン */
+  h2::before {/* 小見出しの[]のデザイン */
     border-top: dotted 1px #535aaa;
     border-left: dotted 1px #535aaa;
     border-bottom: dotted 1px #535aaa;
     left: 0;
   }
   
-  h2:after {/* 小見出しの[]のデザイン */
+  h2::after {/* 小見出しの[]のデザイン */
     content: '';
     border-top: dotted 1px #535aaa;
     border-right: dotted 1px #535aaa;
     border-bottom: dotted 1px #535aaa;
     right: 0;
-  }
+}
 
-  h3 {
+h3 {
     position: relative;
     color: white;
     background: #81d0cb;
@@ -84,7 +84,7 @@ h1 {/* 見出し */
     left: -25px;
     bottom: 0;
     color: #81d0cb;
-  }
+}
 
 li {
     list-style: none;

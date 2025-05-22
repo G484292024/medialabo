@@ -1,6 +1,38 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
+  let p = document.querySelector('div#result');
+  let t = document.createElement('table');
+  p.insertAdjacentElement('afterend',t);
+
+  p = document.querySelector('table');
+  t = document.createElement('thead');
+  p.insertAdjacentElement('beforeend',t);
+
+  p = document.querySelector('table');
+  let tb = document.createElement('tbody');
+  p.insertAdjacentElement('beforeend',tb);
+
+  p = document.querySelector('thead');
+  t = document.createElement('th');
+  p.insertAdjacentElement('beforeend',t);
+
+/*　ここからやってねんっ
+　　for文入れたい
+　　あとテキストも〜
+　　setattribute使ってねんっ
+　　配列も！！！　　　　　　　　　　*/
+
+  p = document.querySelector('tbody');
+  tb = document.createElement('tr');
+  p.insertAdjacentElement('beforeend',tb);
+
+  p = document.querySelector('tr');
+  p.insertAdjacentElement('beforeend',t);
+  let td = document.createElement('td');
+  p.insertAdjacentElement('beforeend',td);
+  
+  console.log(data.name);
   console.log(data.coord.lon);
   console.log(data.coord.lat);
   console.log(data.weather[0].description);
@@ -9,7 +41,6 @@ function print(data) {
   console.log(data.main.humidity);
   console.log(data.wind.speed);
   console.log(data.wind.deg);
-  console.log(data.name);
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること

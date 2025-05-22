@@ -1,4 +1,4 @@
-p {/*　本文　*/
+p,li {/*　本文　*/
     color: #734e30;
 }
 
@@ -15,7 +15,7 @@ h1 {/* 見出し */
     position: absolute;
     left: 0;
     bottom: -4px;
-    width: 38.6%;
+    width: 487px;
     height: 7px;
     background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
     background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
@@ -31,10 +31,10 @@ h2 {/* 小見出し */
   
   h2:before, h2:after { /* 小見出しの[] */
     position: absolute;
-    top: 0;
+    top: 1.5px;
     content:'';
     width: 8px;
-    height: 100%;
+    height: 90%;
     display: inline-block;
   }
   
@@ -53,7 +53,7 @@ h2 {/* 小見出し */
     right: 0;
 }
 
-h3 {
+h3 {/*吹き出しの文字と背景*/
     position: relative;
     color: white;
     background: #81d0cb;
@@ -61,10 +61,10 @@ h3 {
     margin-left: 45px;
     border-radius: 20px;
     line-height: 1.4;
-    width: 25%;
+    width: fit-content;
   }
 
-  h3::before {
+  h3::before {/*吹き出しの前の1個目の丸*/
     font-family: "Font Awesome 5 Free";
     content: "\025cf";
     font-weight: 900;
@@ -75,7 +75,7 @@ h3 {
     color: #81d0cb;
   }
   
-  h3::after {
+  h3::after {/*吹き出しの前の2個目の丸*/
     font-family: "Font Awesome 5 Free";
     content: "\025cf";
     font-weight: 900;
@@ -84,10 +84,6 @@ h3 {
     left: -25px;
     bottom: 0;
     color: #81d0cb;
-}
-
-li {
-    list-style: none;
 }
 
 a:link {/*　URL　*/

@@ -24,14 +24,14 @@ function show(){
 	l = document.querySelector('h2#dept');
 	let ul = document.createElement('ul');
 	l.insertAdjacentElement('afterend',ul);
-	let i = 3;
+	let i = 0;
 	
 	for (let n of gakka){
 		l = document.querySelector('ul');
 		li = document.createElement('li');
 		l.insertAdjacentElement('beforeend',li);
 		li.textContent = gakka[i].name;
-		i = i - 1;
+		i = i + 1;
 	}
 }
 let b = document.querySelector('button#show');

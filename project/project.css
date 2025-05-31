@@ -1,7 +1,26 @@
-h1,th,td{
+h1,th,td {
     color: black;
 }
 
-th{
+th {
     text-align: center;
+}
+
+#parent {
+    display: grid;
+    place-items: center;
+    background-color: aqua;
+}
+
+#visual {
+    aspect-ratio: 16/9;
+    background-color: aqua;
+}
+
+#card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: aqua;
 }

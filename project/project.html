@@ -3,55 +3,33 @@
     <head>
         <meta charset="utf-8">
         <title>世界の天気</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" defer></script>
         <script src="weather.js" defer></script>
         <link ref="project.css" href="project.css">
     </head>
     <body>
-        <h1>世界の天気</h1>
-        <input type="search"><button>検索</button>
-        <table>
-            <thead>
-                <th scope="col" colspan="2">地名</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">都市名</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">経度</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">緯度</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">天気</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">最低気温</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">最高気温</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">湿度</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">風速</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">風向</th>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <div id = "result"></div>
+        <div class="parent">
+            <div class="card">
+                <h1>世界の天気</h1>
+                <select name="country" id="country">
+                    <option value="">国名を一つ選んでください</option>
+                    <option value="1850147"> Japan  in Tokyo </option>
+                    <option value="1816670"> China  in Beijing </option>
+                    <option value="5128581"> America  in New York </option>
+                    <option value="5368361"> America  in Los Angeles </option>
+                    <option value="524901"> Russia  in Moscow </option>
+                    <option value="1880252"> Singapore </option>
+                    <option value="2147714"> Australia  in Sydney </option>
+                    <option value="360630"> Egypt  in Cairo </option>
+                    <option value="993800"> South Africa  in Johannesburg </option>
+                    <option value="2643743"> England  in London </option>
+                    <option value="2968815"> France  in Paris </option>
+                    <option value="3451189"> Brazil  in Rio de Janeiro </option>
+                </select>
+                <button id="search">検索</button>
+                <div class="visual"></div>
+                <div id = "result"></div>
+            </div>
+        </div>
     </body>
 </html>

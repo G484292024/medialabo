@@ -18,9 +18,15 @@ function print(data) {
 function printDom(data) { 
 
   let r = document.querySelector('div#result');
-  r.remove();
-  let rs = document.querySelector('style');
-  rs.remove();
+  let rs = document.querySelectorAll('style');
+
+  if(r !== null || r !== undefined){
+    r.remove();
+    for (let style of rs) {
+        style.remove();
+    }
+    
+  }
 
   const cs = ['日本国','中国人民共和国','アメリカ合衆国','アメリカ合衆国','ロシア連邦','シンガポール共和国','オーストラリア連邦','エジプト・アラブ共和国','南アフリカ共和国','イギリス','フランス共和国','ブラジル連邦共和国'];
 
@@ -59,6 +65,7 @@ function printDom(data) {
   thead = document.querySelector('thead');
   let th = document.createElement('th');
   thead.insertAdjacentElement('beforeend',th);
+  th.setAttribute('width','200');
   th.textContent = cs[idx-1];
 
   for (let n of ns){
@@ -110,6 +117,16 @@ function printDom(data) {
   style = document.createElement('style');
   head.insertAdjacentElement('beforeend',style);
   style.textContent = 'select{margin-top: 20px;margin-left: 5px;place-items: center;}'
+
+  head = document.querySelector('head');
+  style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = 'table{border-collapse: collapse;table-layout: fixed;}'
+
+  head = document.querySelector('head');
+  style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = 'tr,td{padding: 5px 20px;}'
 
 }
 

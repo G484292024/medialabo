@@ -6,6 +6,66 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" defer></script>
         <script src="weather.js" defer></script>
         <link ref="project.css" href="project.css">
+        <style>
+            h1{
+                display: inline-block;
+                position: relative;
+                box-sizing: border-box;
+                padding: 10px;
+                margin: 0 0 0 -20px;
+                width: calc(100% + 20px);
+                font-size: 22px;
+                color: white;
+                background: #70a6ff;
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+            }
+
+            h1::before{
+                position: absolute;
+                content: '';
+                top: 100%;
+                left: 0;
+                border: none;
+                border-bottom: solid 15px transparent;
+                border-right: solid 20px #6081b7;
+            }
+
+            select{
+                margin-top: 20px;
+                margin-left: 5px;
+                place-items: center;
+            }
+            .parent {
+                display: grid;
+                place-items: center;
+            }
+            
+            .card {
+                display: block;
+                position: relative;
+                margin: 15px auto;
+                padding: 10px 0;
+                width: 500px;
+                background: #f1f1f1;
+                flex-direction: column;
+            }
+        
+            .visual {
+                display: grid;
+                place-items: center;
+                background: #f1f8ff;
+                box-shadow: 0px 0px 0px 10px #f1f8ff;
+                border: dashed 2px #668ad8;
+                border-radius: 9px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding: 0.5em 0.5em 0.5em 2em;
+                aspect-ratio: 16/9;
+            }
+            
+        </style>
     </head>
     <body>
         <div class="parent">
@@ -27,8 +87,9 @@
                     <option value="3451189"> Brazil  in Rio de Janeiro </option>
                 </select>
                 <button id="search">検索</button>
-                <div class="visual"></div>
-                <div id = "result"></div>
+                <div id="visual" class="visual">
+                    <div id = "result"></div>
+                </div>
             </div>
         </div>
     </body>

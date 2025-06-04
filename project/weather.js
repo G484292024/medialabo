@@ -19,6 +19,8 @@ function printDom(data) {
 
   let r = document.querySelector('div#result');
   r.remove();
+  let rs = document.querySelector('style');
+  rs.remove();
 
   const cs = ['日本国','中国人民共和国','アメリカ合衆国','アメリカ合衆国','ロシア連邦','シンガポール共和国','オーストラリア連邦','エジプト・アラブ共和国','南アフリカ共和国','イギリス','フランス共和国','ブラジル連邦共和国'];
 
@@ -38,9 +40,9 @@ function printDom(data) {
   let s = document.querySelector('select#country');
   let idx = s.selectedIndex;  //h idx 番目の option が選択された
 
-  let button = document.querySelector('button#search');
+  let visual = document.querySelector('div#visual');
   let div = document.createElement('div');
-  button.insertAdjacentElement('afterend',div);
+  visual.insertAdjacentElement('beforeend',div);
   div.setAttribute('id','result');
 
   let table = document.createElement('table');
@@ -78,6 +80,36 @@ function printDom(data) {
   i = i+1;
 
   }
+
+  let head = document.querySelector('head');
+  let style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = '.parent {display: grid;place-items: center;}'
+
+  head = document.querySelector('head');
+  style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = '.card {display: block;position: relative;margin: 15px auto;padding: 10px 0;width: 500px;background: #f1f1f1;}'
+
+  head = document.querySelector('head');
+  style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = '.visual {display: grid;background: #f1f8ff;box-shadow: 0px 0px 0px 10px #f1f8ff;border: dashed 2px #668ad8;border-radius: 9px;margin-left: 10px;margin-right: 10px;margin-top: 30px;margin-bottom: 15px;padding: 0.5em 0.5em 0.5em 2em;aspect-ratio: 16/9;}'
+
+  head = document.querySelector('head');
+  style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = 'h1{display: inline-block;position: relative;box-sizing: border-box;padding: 10px;margin: 0 0 0 -20px;width: calc(100% + 20px);font-size: 22px;color: white;background: #70a6ff;box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);}'
+
+  head = document.querySelector('head');
+  style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = 'h1::before{position: absolute;content: \'\';top: 100%;left: 0;border: none;border-bottom: solid 15px transparent;border-right: solid 20px #6081b7;}'
+
+  head = document.querySelector('head');
+  style = document.createElement('style');
+  head.insertAdjacentElement('beforeend',style);
+  style.textContent = 'select{margin-top: 20px;margin-left: 5px;place-items: center;}'
 
 }
 
